@@ -1,4 +1,10 @@
-function App() {
+import foto from "./assets/logo.jpg";
+import upn from "./assets/upn.png";
+import itson from "./assets/itson.png";
+import unir from "./assets/u.png";
+import uveg from "./assets/uveg.png";
+
+const App = () => {
   // Smooth scrolling
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
@@ -51,25 +57,30 @@ function App() {
 
       <header class="relative py-20 px-6">
         <div class="container mx-auto text-center relative z-10">
-          <div class="mb-8">
-            <div class="w-32 h-32 mx-auto rounded-full glass glow-blue flex items-center justify-center text-5xl">
-              👩‍🎓
+          <div class="mb-6">
+            <div class="w-70 h-70 mx-auto p-2 rounded-full glass glow-blue flex items-center justify-center text-5xl">
+              <img src={foto} className="rounded-full shadow-xl" />
             </div>
           </div>
 
-          <h1 class="text-5xl font-light mb-4 tracking-wide">
-            Dr. Ana María González
+          <h1 class="text-5xl font-extralight mb-4 tracking-wide">
+            Rubén Aragón
           </h1>
           <div class="flex flex-wrap justify-center gap-2 mb-6">
             <span class="glass px-4 py-2 rounded-full text-sm text-electric-blue">
-              Doctora en Ciencias Sociales
+              Estudiante de Doctorado en Sistemas y <br /> Ambientes Educativos
             </span>
-            <span class="glass px-4 py-2 rounded-full text-sm text-neon-orange">
+            <span class="glass flex items-center px-4 py-2 rounded-full text-sm text-neon-orange">
               Ingeniera en Desarrollo de Software
             </span>
           </div>
-          <p class="text-lg max-w-2xl mx-auto opacity-80 font-light leading-relaxed">
-            Fusionando investigación social con innovación tecnológica
+          <p class="text-lg max-w-2xl mx-auto opacity-80 font-light leading-relaxed text-justify">
+            Educador con 6 años de experiencia como docente y director en
+            primaria, especializado en talleres para niños y adultos. Además,
+            cuento con experiencia en Desarrollo Web y Software, con habilidades
+            intermedias en Front-End y básicas en Back-End. Comunica eficazmente
+            en español (nativo) e inglés (B1), integrando formación pedagógica
+            con competencias digitales emergentes.
           </p>
 
           <div class="flex justify-center space-x-4 mt-12">
@@ -80,28 +91,25 @@ function App() {
               <i class="fas fa-envelope"></i>
             </a>
             <a
-              href="https://linkedin.com/in/anagonzalez"
+              href="https://www.linkedin.com/in/ruben-aragong/"
+              target="_blank"
               class="glass hover-glow w-12 h-12 rounded-full flex items-center justify-center hover:glow-blue transition-all"
             >
               <i class="fab fa-linkedin"></i>
             </a>
             <a
-              href="https://github.com/anagonzalez"
+              href="https://github.com/torofms37"
+              target="_blank"
               class="glass hover-glow w-12 h-12 rounded-full flex items-center justify-center hover:glow-orange transition-all"
             >
               <i class="fab fa-github"></i>
             </a>
             <a
-              href="https://twitter.com/anagonzalez"
+              href="https://twitter.com/bleiks"
+              target="_blank"
               class="glass hover-glow w-12 h-12 rounded-full flex items-center justify-center hover:glow-red transition-all"
             >
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a
-              href="tel:+1234567890"
-              class="glass hover-glow w-12 h-12 rounded-full flex items-center justify-center hover:glow-blue transition-all"
-            >
-              <i class="fas fa-phone"></i>
+              <i class="fab fa-x"></i>
             </a>
           </div>
         </div>
@@ -134,7 +142,7 @@ function App() {
 
       <section id="educacion" class="py-16 px-6">
         <div class="container mx-auto">
-          <h2 class="text-3xl font-light text-center mb-16 tracking-wide">
+          <h2 class="text-3xl font-normal text-center mb-16 tracking-wide">
             Formación Académica
           </h2>
 
@@ -143,7 +151,7 @@ function App() {
               <div class="flex items-start space-x-6">
                 <div class="flex-shrink-0">
                   <div class="w-16 h-16 glass rounded-2xl flex items-center justify-center text-electric-blue font-bold">
-                    UAM
+                    <img src={itson} className="rounded-2xl shadow-xl" />
                   </div>
                 </div>
                 <div class="flex-1 min-w-0">
@@ -151,11 +159,13 @@ function App() {
                     Doctorado en Ciencias Sociales
                   </h3>
                   <p class="text-electric-blue font-light mb-2">
-                    Universidad Autónoma de Madrid
+                    Instituto Tecnológico de Sonora
                   </p>
-                  <p class="text-white/60 text-sm mb-3">2020 - 2024</p>
+                  <p class="text-white/60 text-sm mb-3">2023 - 2026</p>
                   <p class="text-white/80 text-sm font-light">
-                    Sociología Digital y Transformación Social
+                    Proyectos de investigación, con enfoque prospectivo,
+                    relativos a Sistemas y Ambientes Educativos, con alto
+                    impacto social.
                   </p>
                 </div>
               </div>
@@ -165,7 +175,7 @@ function App() {
               <div class="flex items-start space-x-6">
                 <div class="flex-shrink-0">
                   <div class="w-16 h-16 glass rounded-2xl flex items-center justify-center text-neon-orange font-bold">
-                    UPM
+                    <img src={uveg} className="rounded-2xl shadow-xl" />
                   </div>
                 </div>
                 <div class="flex-1 min-w-0">
@@ -173,11 +183,12 @@ function App() {
                     Ingeniería en Desarrollo de Software
                   </h3>
                   <p class="text-neon-orange font-light mb-2">
-                    Universidad Politécnica de Madrid
+                    Universidad Virtual del Estado de Guanajuato
                   </p>
-                  <p class="text-white/60 text-sm mb-3">2016 - 2020</p>
+                  <p class="text-white/60 text-sm mb-3">2025 - 2028</p>
                   <p class="text-white/80 text-sm font-light">
-                    Desarrollo Web Full-Stack y Arquitectura
+                    Habilidades avanzadas para desarrollar soluciones basadas en
+                    software, utilizando tecnologías de vanguardia.
                   </p>
                 </div>
               </div>
@@ -186,19 +197,45 @@ function App() {
               <div class="flex items-start space-x-6">
                 <div class="flex-shrink-0">
                   <div class="w-16 h-16 glass rounded-2xl flex items-center justify-center text-neon-red font-bold">
-                    UCM
+                    <img src={unir} className="rounded-2xl shadow-xl" />
                   </div>
                 </div>
                 <div class="flex-1 min-w-0">
                   <h3 class="text-xl font-light mb-2">
-                    Máster en Investigación Social
+                    Maestría en Tecnología Educativa y Competencias Digitales
                   </h3>
                   <p class="text-neon-red font-light mb-2">
-                    Universidad Complutense de Madrid
+                    Universidad de la Rioja en México
                   </p>
-                  <p class="text-white/60 text-sm mb-3">2015 - 2016</p>
+                  <p class="text-white/60 text-sm mb-3">2020 - 2022</p>
                   <p class="text-white/80 text-sm font-light">
-                    Metodologías de investigación social
+                    Maestría en Tecnología Educativa: innovación,
+                    neuroeducación, gamificación y robótica, sé un líder en
+                    educación digital.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="glass-green hover-glow p-8 rounded-3xl">
+              <div class="flex items-start space-x-6">
+                <div class="flex-shrink-0">
+                  <div class="w-16 h-16 glass rounded-2xl flex items-center justify-center text-neon-red font-bold">
+                    <img src={upn} className="rounded-2xl shadow-xl" />
+                  </div>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <h3 class="text-xl font-light mb-2">
+                    Licenciatura en Intervención Educativa
+                  </h3>
+                  <p class="text-green-500 font-light mb-2">
+                    Universidad Pedagógica Nacional
+                  </p>
+                  <p class="text-white/60 text-sm mb-3">2013 - 2017</p>
+                  <p class="text-white/80 text-sm font-light">
+                    Profundización en campos delimitados, que les permita
+                    desempeñarse e intervenir con mayores elementos
+                    conceptuales, metodológicos y técnico-instrumentales, en un
+                    campo problemático específico de la educación.
                   </p>
                 </div>
               </div>
@@ -320,6 +357,6 @@ function App() {
       </div>
     </body>
   );
-}
+};
 
 export default App;
