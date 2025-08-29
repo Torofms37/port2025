@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+body {
+  background: linear-gradient(
+    135deg,
+    #0a0a0a 0%,
+    #1a1a2e 25%,
+    #16213e 50%,
+    #0f0f23 75%,
+    #000000 100%
+  );
+  min-height: 100vh;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.glass-blue {
+  background: rgba(0, 123, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 123, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 123, 255, 0.1);
+}
+
+.glass-red {
+  background: rgba(220, 38, 127, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(220, 38, 127, 0.2);
+  box-shadow: 0 8px 32px rgba(220, 38, 127, 0.1);
+}
+
+.glass-orange {
+  background: rgba(255, 165, 0, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 165, 0, 0.2);
+  box-shadow: 0 8px 32px rgba(255, 165, 0, 0.1);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.3);
+}
+
+.glow-red {
+  box-shadow: 0 0 20px rgba(220, 38, 127, 0.3);
+}
+
+.glow-orange {
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.3);
+}
+
+.hover-glow:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+.text-electric-blue {
+  color: #007bff;
+}
+.text-neon-red {
+  color: #dc267f;
+}
+.text-neon-orange {
+  color: #ffa500;
+}
+
+.floating-orbs::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 123, 255, 0.1) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  top: 10%;
+  right: 10%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-orbs::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 165, 0, 0.1) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  bottom: 20%;
+  left: 15%;
+  animation: float 8s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
